@@ -1,0 +1,195 @@
+body {
+  background: url(/css_rocket/img/back.jpg);
+  background-size: cover;
+  background-position: unset;
+  /*   background-blend-mode: lighten; */
+  /*   opacity: 15%; */
+}
+
+.rocket {
+  --rocket-start: 500px;
+  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: var(--rocket-start);
+  top: 550px;
+}
+
+/* rocket */
+
+.fas.fa-space-shuttle {
+  font-size: 40px;
+  color: ghostwhite;
+  transform: rotate(270deg);
+}
+
+.rocket-animation-left {
+  animation-name: rocket-left;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.rocket-animation-right {
+  animation-name: rocket-right;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes rocket-left {
+  0% {
+    left: var(--rocket-start);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    left: 50px;
+  }
+}
+
+@keyframes rocket-right {
+  0% {
+    left: var(--rocket-start);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  100% {
+    left: 900px;
+  }
+}
+
+/* stars */
+
+.star {
+  --height: 15px;
+  --width: 15px;
+  --delay: 0s;
+  --speed: 5s;
+  --angle: 50vw;
+  --start-position: 10vw;
+  --blink: 5s;
+  display: inline-block;
+  position: relative;
+  top: -100px;
+  left: var(--start-position);
+  height: var(--height);
+  width: var(--width);
+  border-radius: 50%;
+  background-image: radial-gradient(
+    #99ffff,
+    #99ffff 10%,
+    rgba(153, 255, 255, 0) 56%
+  );
+  animation: my-name-is-star var(--speed) infinite var(--delay) linear,
+    fade-frames 200ms infinite var(--delay),
+    scale-frames var(--blink) infinite var(--delay);
+}
+
+@keyframes my-name-is-star {
+  0% {
+    left: var(--start-position);
+  }
+  100% {
+    left: var(--angle);
+    top: 90vh;
+  }
+}
+
+@keyframes fade-frames {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-frames {
+  0% {
+    -webkit-transform: scale3d(0.4, 0.4, 1);
+    transform: scale3d(0.4, 0.4, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(2.2, 2.2, 1);
+    transform: scale3d(2.2, 2.2, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(0.4, 0.4, 1);
+    transform: scale3d(0.4, 0.4, 1);
+  }
+}
+
+/* comets */
+
+.fas.fa-meteor {
+  font-size: 30px;
+  color: red;
+  /*   transform: rotate(-90deg); */
+}
+
+.comet-animation-left {
+  --comet-speed: 0.5s;
+  --bottom: 600px;
+  animation-name: comet-left;
+  animation-duration: var(--comet-speed);
+  /*   animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.comet-animation-right {
+  --comet-speed: 0.5s;
+  --bottom: 600px;
+  animation-name: comet-right;
+  animation-duration: var(--comet-speed);
+  /*   animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.comet-animation-down {
+  --comet-speed: 0.5s;
+  --bottom: 600px;
+  animation-name: comet-down;
+  animation-duration: var(--comet-speed);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes comet-left {
+  0% {
+    top: 0px;
+    right: 0px;
+  }
+  100% {
+    top: var(--bottom);
+    right: 110px;
+  }
+}
+
+@keyframes comet-right {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    top: var(--bottom);
+    left: 210px;
+  }
+}
+
+@keyframes comet-down {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    left: 0px;
+    top: var(--bottom);
+  }
+}
