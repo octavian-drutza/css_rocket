@@ -103,7 +103,7 @@ function changeLevel() {
   level++;
   setUpLevel();
   if (cometFreq > 400) {
-    cometFreq -= 100;
+    cometFreq -= 150;
   } else if (cometFreq <= 200) {
     cometFreq -= 10;
   } else if (cometFreq <= 20) {

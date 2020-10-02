@@ -147,7 +147,6 @@ export class Comet {
 
 function generateComets() {
   let comet = new Comet(...generateRandomProps());
-  /*   comet.create(); */
 }
 
 function generateRandomProps() {
