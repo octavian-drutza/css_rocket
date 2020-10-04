@@ -11,6 +11,17 @@ body {
   background-position: unset;
 }
 
+.how-to {
+  padding: 0 20px 0 20px;
+  display: inline-block;
+  width: 1000px;
+  margin-top: 30px;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 8px black;
+  text-align: center;
+}
+
 /* score container */
 .score-container {
   padding: 0 20px 0 20px;

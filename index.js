@@ -23,7 +23,7 @@ let borderLeft,
   starFreq = 100,
   cometFreq = 500,
   sateliteFreq = 3000,
-  levelChangeFreq = 60000,
+  levelChangeFreq = 30000,
   starInterval,
   cometsInterval,
   levelInterval,
@@ -105,7 +105,7 @@ function changeLevel() {
   if (cometFreq > 400) {
     cometFreq -= 150;
   } else if (cometFreq <= 200) {
-    cometFreq -= 10;
+    cometFreq -= 50;
   } else if (cometFreq <= 20) {
     cometFreq = 15;
   }
