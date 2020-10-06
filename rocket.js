@@ -66,7 +66,7 @@ function directMove(event) {
 
 function stopMove(event) {
   if (event.code === "ArrowLeft" || event.code === "ArrowRight") {
-    rocketIntertion();
+    rocketInertion();
     direction = DIRECTIONS.STEADY;
     removeAnimation();
   }
@@ -96,7 +96,7 @@ function wiggleScreen() {
   };
 }
 
-function rocketIntertion() {
+function rocketInertion() {
   if (direction == DIRECTIONS.LEFT) {
     rocketCell.classList.add("rocket-animation-stop-left");
   } else if (direction == DIRECTIONS.RIGHT) {

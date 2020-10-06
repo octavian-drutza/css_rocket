@@ -29,7 +29,7 @@ let borderLeft,
   levelInterval,
   satelitesInterval,
   gameOn = false,
-  scoreStart = 1,
+  scoreStart = 100,
   score;
 
 activateStart();
