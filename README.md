@@ -1,3 +1,3 @@
 # css_rocket
-Game
+Object collision game;
 Used: CSS, JS;
